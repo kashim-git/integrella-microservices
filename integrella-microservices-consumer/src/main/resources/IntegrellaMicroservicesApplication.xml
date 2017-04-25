@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xmlns:feed="http://www.springframework.org/schema/integration/feed"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/feed http://www.springframework.org/schema/integration/feed/spring-integration-feed.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd">
+
+	<!--  import resource="classpath:IntegrellaMdm-config.xml" / -->
+
+	<int:wire-tap channel="logger" pattern="inboundMessages,outboundMessages"/>
+	<int:logging-channel-adapter id="logger" log-full-message="true" level="INFO"/>
+    
+    <!--  To receive AMQP Messages from a Queue, configure an inbound-channel-adapter  -->
+    
+   <int-amqp:inbound-channel-adapter
+   		id="inbound"
+   		queue-names="q.mdm.esb"
+   		channel="inboundMessages"
+   		connection-factory="mdmConnectionFactory"/>
+
+	<int:channel id="inboundMessages"/>
+       
+    <int:channel id="outboundMessages"/>
+    
+    
+    <!-- Here is the configuration to write conversion classes... -->
+	
+	<int:transformer 
+		id="transformMessage" 
+		ref="transformer" 
+		input-channel="inboundMessages"
+		output-channel="outboundMessages"
+		method="transform" 
+	/>
+
+	<bean id="transformer" class="com.integrella.microservices.transformer.TransformMessage" />
+ 		
+
+ 	<int-amqp:outbound-channel-adapter 
+ 		id="outbound"
+ 		channel="outboundMessages"
+        exchange-name="mdm.outbound.exchange"
+        routing-key="out"
+        amqp-template="rabbitTemplate"/>
+        
+        
+    <!-- INFRASTRUCTURE --> 
+       
+    <rabbit:connection-factory id="mdmConnectionFactory" host="localhost" />
+
+	<rabbit:template id="rabbitTemplate" connection-factory="mdmConnectionFactory" />
+
+	<rabbit:admin connection-factory="mdmConnectionFactory" />
+
+	<rabbit:queue name="q.adapter.outbound"/>
+	<rabbit:queue name="q.mdm.esb"/>
+	
+
+	<rabbit:direct-exchange name="mdm.outbound.exchange">
+		<rabbit:bindings>
+			<rabbit:binding queue="q.adapter.outbound" key="out"/>
+		</rabbit:bindings>
+	</rabbit:direct-exchange>
+
+</beans>
