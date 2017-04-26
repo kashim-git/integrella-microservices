@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.integrella.microservices</groupId>
-	<artifactId>integrella-microservices-consumer-scheduled</artifactId>
+	<artifactId>integrella-microservices-producer-scheduled</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>integrella-microservices-consumer-scheduled</name>
+	<name>integrella-microservices-producer-scheduled</name>
 	<description>Integrella Message-Driven-Microservices Reference Architecture Inbound Adaptor</description>
 
 	<parent>

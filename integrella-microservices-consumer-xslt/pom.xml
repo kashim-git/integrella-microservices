@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.integrella.microservices</groupId>
-	<artifactId>integrella-mdm</artifactId>
+	<artifactId>integrella-microservices-producer-xslt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Integrella-MDM-Adapter</name>
-	<description>Integrella Message-Driven-Microservices Reference Architecture Inbound Adaptor</description>
+	<name>integrella-microservices-producer-xslt</name>
+	<description>Integrella Message-Driven-Microservices Reference Architecture Inbound Adaptor performing XSLT transformation</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
