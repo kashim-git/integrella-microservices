@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xmlns:int-xml="http://www.springframework.org/schema/integration/xml"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+		http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd">
+
+	<int:wire-tap channel="logger" pattern="inboundMessages,outboundMessages"/>
+	<int:logging-channel-adapter id="logger" log-full-message="true" level="INFO"/>
+    
+    <!--  To receive AMQP Messages from a Queue, configure an inbound-channel-adapter  -->
+    
+   	<int-amqp:inbound-channel-adapter
+   		id="inbound"
+   		queue-names="q.adapter.inbound"
+   		channel="objectin"
+   		connection-factory="mdmConnectionFactory"/>
+   		
+   	<int:object-to-string-transformer input-channel="objectin" output-channel="inboundMessages"/>
+   		
+    <int:channel id="objectin"/>    
+	<int:channel id="inboundMessages"/>
+    <int:channel id="outboundMessages"/>
+    
+	<int-xml:xslt-transformer 
+		input-channel="inboundMessages" 
+		output-channel="outboundMessages" 
+		xsl-resource="classpath:MxMLBondTranslation.xsl"/>
+
+ 	<int-amqp:outbound-channel-adapter 
+ 		id="outbound"
+ 		channel="outboundMessages"
+        exchange-name="mdm.esb.exchange"
+        routing-key="esb"
+        amqp-template="rabbitTemplate"/>
+        
+        
+    <!-- INFRASTRUCTURE --> 
+       
+    <rabbit:connection-factory id="mdmConnectionFactory" host="localhost" />
+
+	<rabbit:template id="rabbitTemplate" connection-factory="mdmConnectionFactory" />
+
+	<rabbit:admin connection-factory="mdmConnectionFactory" />
+
+	<rabbit:queue name="q.adapter.inbound"/>
+	<rabbit:queue name="q.mdm.esb"/>
+	
+
+	<rabbit:direct-exchange name="mdm.esb.exchange">
+		<rabbit:bindings>
+			<rabbit:binding queue="q.mdm.esb" key="esb" />
+		</rabbit:bindings>
+	</rabbit:direct-exchange>
+
+</beans>

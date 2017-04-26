@@ -1,0 +1,804 @@
+<MxML version="1-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/DEV/XML/MXMLSchema.xsd">
+	<documentProperties type="documentProperties">
+		<producedBy>
+			<partyName type="string">SBSA-GTS</partyName>
+			<user>
+				<name type="string">MUREXBO</name>
+				<group type="string">FO</group>
+				<desk type="string">FO</desk>
+				<code/>
+			</user>
+		</producedBy>
+		<systemDate type="date">20061122</systemDate>
+		<accountingDate type="date">20061122</accountingDate>
+		<computerDate type="date">20070522</computerDate>
+		<computerTime type="time">17:05:08</computerTime>
+	</documentProperties>
+	<events>
+		<mainEvent>
+			<action>insertion</action>
+			<object href="#contract_575218_1">
+				<objectNature type="string">contract</objectNature>
+				<objectId>575218</objectId>
+			</object>
+			<inputBy>
+				<userName type="string">MUREXBO</userName>
+				<group type="string">FO</group>
+				<desk type="string">FO</desk>
+				<code/>
+			</inputBy>
+		</mainEvent>
+	</events>
+	<contracts type="contracts">
+		<contract id="contract_575218_1" mefClass="mxContractISINGLE" mefClassInstanceType="41.000000" type="contract">
+			<contractId type="contractId">
+				<internalId>575218</internalId>
+			</contractId>
+			<packageMethodFields type="PackageMethodFields">
+				<packageMethodField type="PackageMethodField">
+					<fieldLabel type="string">Structure</fieldLabel>
+					<fieldValue type="string"/>
+					<fieldType type="string">character</fieldType>
+				</packageMethodField>
+			</packageMethodFields>
+			<contractHeader type="contractHeader">
+				<contractCategory type="contractCategory">
+					<typology type="string">IRD - BONDS</typology>
+					<usage type="string"/>
+				</contractCategory>
+				<contractAgreements type="contractAgreements">
+					<settlementMethod type="string"/>
+				</contractAgreements>
+				<contractSource type="contractSource">
+					<sourceModule type="string">mx</sourceModule>
+					<originPublishingSystem type="string">MX</originPublishingSystem>
+					<publishingSystem type="string">MX</publishingSystem>
+					<packageReference mefClass="">
+						<packageId>
+							<internalId>0</internalId>
+							<creatorId>0</creatorId>
+						</packageId>
+					</packageReference>
+					<contractEventReference mefClass="">
+						<contractEventId type="contractEventId">
+							<internalId>-1</internalId>
+							<businessObjectId mefClass="" type="string">
+								<versionIdentifier>
+									<versionRevision>
+										<versionNumber>1</versionNumber>
+										<versionDateAndTime>
+											<date type="date">00000000</date>
+										</versionDateAndTime>
+									</versionRevision>
+								</versionIdentifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+						</contractEventId>
+					</contractEventReference>
+					<contractCreatorReference mefClass="">
+						<contractId type="contractId">
+							<internalId>0</internalId>
+						</contractId>
+					</contractCreatorReference>
+					<contractOriginReference mefClass="mxContractISINGLE">
+						<contractId type="contractId">
+							<internalId>575218</internalId>
+						</contractId>
+					</contractOriginReference>
+					<version type="integer">1</version>
+					<lastContractEventReference mefClass="">
+						<contractEventId type="contractEventId">
+							<internalId>-1</internalId>
+							<businessObjectId mefClass="" type="string">
+								<versionIdentifier>
+									<versionRevision>
+										<versionNumber>1</versionNumber>
+										<versionDateAndTime>
+											<date type="date">00000000</date>
+										</versionDateAndTime>
+									</versionRevision>
+								</versionIdentifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+						</contractEventId>
+					</lastContractEventReference>
+					<lastContractEventAction>INSERT</lastContractEventAction>
+					<originContractEventReference mefClass="">
+						<contractEventId type="contractEventId">
+							<internalId>-1</internalId>
+							<businessObjectId mefClass="" type="string">
+								<versionIdentifier>
+									<versionRevision>
+										<versionNumber>1</versionNumber>
+										<versionDateAndTime>
+											<date type="date">00000000</date>
+										</versionDateAndTime>
+									</versionRevision>
+								</versionIdentifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+						</contractEventId>
+					</originContractEventReference>
+					<originDate>20061109</originDate>
+					<workflowParties>
+						<wopInitiator>
+							<role/>
+							<name type="string">MUREXBO</name>
+							<group type="string">ALLPNL</group>
+						</wopInitiator>
+						<wopLastActor>
+							<role/>
+							<name type="string">MUREXBO</name>
+							<group type="string">ALLPNL</group>
+						</wopLastActor>
+						<wopInternalTrader>
+							<name type="string"/>
+							<group type="string"/>
+						</wopInternalTrader>
+						<wopInternalPortfolio>
+							<wopIsBackToBack>N</wopIsBackToBack>
+						</wopInternalPortfolio>
+						<wopParties/>
+					</workflowParties>
+				</contractSource>
+			</contractHeader>
+			<inputConditions>
+				<inputBy/>
+				<areaCode type="decimal">0</areaCode>
+				<timestamp>2007/05/22 15:05:05</timestamp>
+			</inputConditions>
+			<contractComponents type="contractComponents">
+				<contractComponent type="contractComponent">
+					<typologyId type="integer">0</typologyId>
+					<tradeReference href="#trade_497691_1"/>
+				</contractComponent>
+			</contractComponents>
+		</contract>
+	</contracts>
+	<trades type="trades">
+		<trade id="trade_497691_1" mefClass="mxContractITRADE" mefClassInstanceType="41.000000" type="trade">
+			<parties type="Parties">
+				<party id="SBSA-GTS" type="Party">
+					<partyName type="string">SBSA-GTS</partyName>
+					<partyFullName type="string">SBSA-GTS</partyFullName>
+					<partyCode type="string">SBSA-GTS22</partyCode>
+				</party>
+				<party id="_1829" type="Party">
+					<partyName type="string">TEL AVIV STOCK EXCH</partyName>
+				</party>
+				<party id="_1488" type="Party">
+					<partyName type="string">BGC INTERNATIONAL LONDON</partyName>
+				</party>
+			</parties>
+			<portfolios type="Portfolios">
+				<portfolio id="LMLNSBLEMP5" type="Portfolio">
+					<portfolioLabel type="string">LMLNSBLEMP5</portfolioLabel>
+				</portfolio>
+			</portfolios>
+			<tradeHeader type="tradeHeader">
+				<tradeDate type="date">20061109</tradeDate>
+				<tradeCategory type="tradeCategory">
+					<tradeDestination type="string">external</tradeDestination>
+					<tradeFamily type="string">IRD</tradeFamily>
+					<tradeGroup type="string">BOND</tradeGroup>
+					<typology type="string">IRD - BONDS</typology>
+					<usage type="string"/>
+				</tradeCategory>
+				<tradeSource type="tradeSource">
+					<replacementDate type="date">20061123</replacementDate>
+					<originPublishingSystemID type="string">100164</originPublishingSystemID>
+				</tradeSource>
+				<tradeViews type="TradeViews">
+					<tradeView type="TradeView">
+						<partyReference href="#SBSA-GTS">
+							<portfolioReference href="#LMLNSBLEMP5"/>
+						</partyReference>
+						<userName type="string">KACMARIKL</userName>
+						<sales type="string">BANTANA</sales>
+						<strategy type="string">CLN 215</strategy>
+						<accountingSection type="string">TRADING</accountingSection>
+						<entity type="string">LMLNSBL</entity>
+						<legalEntity type="string">SBL</legalEntity>
+						<tradeId type="TradeId">
+							<tradeInternalId type="string">497691</tradeInternalId>
+							<hostingSystem type="string">MX</hostingSystem>
+							<publishingSystemID type="string">497691</publishingSystemID>
+						</tradeId>
+						<comments type="Comments">
+							<comment index="0" type="string">Source Comment 1</comment>
+							<comment index="1" type="string">Source Comment 2</comment>
+						</comments>
+					</tradeView>
+					<tradeView type="TradeView">
+						<partyReference href="#_1829"/>
+						<sales type="string">BANTANA</sales>
+						<entity type="string">LMLNSBL</entity>
+						<comments type="Comments">
+							<comment index="0" type="string">Destination Comment</comment>
+						</comments>
+					</tradeView>
+				</tradeViews>
+				<tradeUserDefinedFields>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">Source</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">MX</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">Implementation</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">FX</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">Location</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">LN</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">CalypsoContractID</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">MF00575218</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">GlobusID</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">130701    </fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">OSD_ID</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">54565</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">CPT_Internal</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">N</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">TradeType</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string">IRD - BOND</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">BuyCurrency</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string"/>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="userDefinedField">
+						<fieldLabel type="string">SellCurrency</fieldLabel>
+						<fieldIndex type="decimal"/>
+						<fieldValue type="string"/>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="UserDefinedField">
+						<fieldLabel type="string">SALECCY</fieldLabel>
+						<fieldIndex type="decimal">13</fieldIndex>
+						<fieldValue type="string">USD</fieldValue>
+						<fieldType type="string">character</fieldType>
+					</userDefinedField>
+					<userDefinedField type="UserDefinedField">
+						<fieldLabel type="string">SALECREDIT</fieldLabel>
+						<fieldIndex type="decimal">14</fieldIndex>
+						<fieldValue type="string">0</fieldValue>
+						<fieldType type="string">numeric</fieldType>
+					</userDefinedField>
+				</tradeUserDefinedFields>
+				<tradeFees type="TradeFees">
+					<tradeFee type="TradeFee">
+						<payerPartyReference href="#SBSA-GTS">
+							<portfolioReference href="#LMLNSBLEMP5"/>
+						</payerPartyReference>
+						<receiverPartyReference href="#_1488"/>
+						<feeType type="string">brokerFee</feeType>
+						<feeCurrency type="string"/>
+						<feeAmount type="decimal">50</feeAmount>
+						<feeDateType type="string">transactionDate</feeDateType>
+						<feeDate>20061109</feeDate>
+						<businessObjectId mefClass="mxStaticsIBROKER_FLOW" type="string">
+							<identifier>6590</identifier>
+							<primarySystem>MX</primarySystem>
+						</businessObjectId>
+					</tradeFee>
+				</tradeFees>
+				<tradeAgreements type="tradeAgreements">
+					<paymentNetting type="string">true</paymentNetting>
+				</tradeAgreements>
+				<contractReference mefClass="mxContractISINGLE">
+					<contractId type="contractId">
+						<internalId>575218</internalId>
+					</contractId>
+				</contractReference>
+				<tradeProcessing>
+					<nonUnwoundRatio>1.</nonUnwoundRatio>
+				</tradeProcessing>
+			</tradeHeader>
+			<tradeBody type="tradeBody">
+				<bond type="securityTrade">
+					<securityId type="securityID">
+						<securityCode type="string">IL0092667356</securityCode>
+						<securityAlternateCodes type="SecurityAlternateCodes"/>
+						<securityLabel type="string">SHA 6.00% 01/10</securityLabel>
+						<securityMarket type="string">SHAHAR</securityMarket>
+					</securityId>
+					<securityHolderReference href="#SBSA-GTS">
+						<portfolioReference href="#LMLNSBLEMP5"/>
+					</securityHolderReference>
+					<securityWriterReference href="#_1829"/>
+					<quantity type="decimal">5</quantity>
+					<securityCapital type="securityCapital">
+						<outstandingCapital type="decimal">5000000</outstandingCapital>
+					</securityCapital>
+					<settlement type="settlement">
+						<settlementFlow type="settlementFlow">
+							<flow type="flow">
+								<payerPartyReference href="#SBSA-GTS">
+									<portfolioReference href="#LMLNSBLEMP5"/>
+								</payerPartyReference>
+								<receiverPartyReference href="#_1829"/>
+								<date type="date">20061109</date>
+								<currency type="string">ILS</currency>
+								<amount type="decimal">5311678</amount>
+							</flow>
+							<price type="price">
+								<priceRate type="decimal">101.59794521</priceRate>
+								<bondPriceData type="bondPriceData">
+									<cleanPrice type="decimal">101.59794521</cleanPrice>
+									<dirtyPrice type="decimal">106.233561648356</dirtyPrice>
+									<accruedCoupon type="decimal">4.63561643835617</accruedCoupon>
+									<accruedDayCount type="dayCount">
+										<numerator type="decimal">282</numerator>
+										<denominator type="decimal">365</denominator>
+									</accruedDayCount>
+									<yield type="decimal">5.43297540014966</yield>
+								</bondPriceData>
+							</price>
+							<fxRate type="decimal">1</fxRate>
+							<salesMargin type="decimal">0.001</salesMargin>
+							<paymentConditions type="string">fop</paymentConditions>
+						</settlementFlow>
+					</settlement>
+					<valueDate type="date">20061109</valueDate>
+					<clearingHouse type="string">LCH</clearingHouse>
+					<settlementLags type="securitySettlementLags">
+						<settlementLagsLabel type="string">0OD, 0OD E</settlementLagsLabel>
+						<paymentDateShifter type="dateShifter">
+							<dateShifterLabel type="string">+0 OPEN DAY</dateShifterLabel>
+							<businessObjectId mefClass="mxStaticsDatesISHIFTER" type="string">
+								<identifier>+0 OPEN DAY</identifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+							<shift type="Period">
+								<periodUnit type="string">day</periodUnit>
+								<periodMultiplier type="string">0</periodMultiplier>
+							</shift>
+							<businessDayConvention type="string">following</businessDayConvention>
+						</paymentDateShifter>
+						<couponDividendDateShifter type="dateShifter">
+							<dateShifterLabel type="string">+0 OPEN DAY</dateShifterLabel>
+							<businessObjectId mefClass="mxStaticsDatesISHIFTER" type="string">
+								<identifier>+0 OPEN DAY</identifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+							<shift type="Period">
+								<periodUnit type="string">day</periodUnit>
+								<periodMultiplier type="string">0</periodMultiplier>
+							</shift>
+							<businessDayConvention type="string">following</businessDayConvention>
+						</couponDividendDateShifter>
+						<exclusiveInclusive type="string">exclusive</exclusiveInclusive>
+					</settlementLags>
+				</bond>
+			</tradeBody>
+			<settlementInstructions type="settlementInstructions">
+				<settlementInstruction type="settlementInstruction">
+					<settlementInstructionKey type="settlementInstructionKey">
+						<partyReference href="#_1829"/>
+						<flowSign type="string">Credit</flowSign>
+						<flowCurrency type="string">ILS</flowCurrency>
+						<flowNature type="string">Capital</flowNature>
+						<settlementType type="string">Cash</settlementType>
+					</settlementInstructionKey>
+					<settlementInstructionDescription type="settlementInstructionDescription">
+						<flowConversion type="string">false</flowConversion>
+						<nostroReferenceId type="decimal">5897</nostroReferenceId>
+						<specificNostro type="string">false</specificNostro>
+						<customizedNostro type="string">false</customizedNostro>
+						<vostroReferenceId type="decimal">0</vostroReferenceId>
+						<specificVostro type="string">false</specificVostro>
+						<customizedVostro type="string">false</customizedVostro>
+					</settlementInstructionDescription>
+					<nostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_ACC</fieldLabel>
+							<fieldIndex type="decimal">0</fieldIndex>
+							<fieldValue type="string">600-370404</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_NAME</fieldLabel>
+							<fieldIndex type="decimal">6</fieldIndex>
+							<fieldValue type="string">SBLLGB2L</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">INST_CODE</fieldLabel>
+							<fieldIndex type="decimal">25</fieldIndex>
+							<fieldValue type="string">POALILIT</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">NOS_ACC</fieldLabel>
+							<fieldIndex type="decimal">38</fieldIndex>
+							<fieldValue type="string">100050862</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</nostroInstructions>
+					<vostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</vostroInstructions>
+				</settlementInstruction>
+				<settlementInstruction type="settlementInstruction">
+					<settlementInstructionKey type="settlementInstructionKey">
+						<partyReference href="#_1829"/>
+						<flowSign type="string">Debit</flowSign>
+						<flowCurrency type="string">ILS</flowCurrency>
+						<flowNature type="string">Capital</flowNature>
+						<settlementType type="string">Cash</settlementType>
+					</settlementInstructionKey>
+					<settlementInstructionDescription type="settlementInstructionDescription">
+						<flowConversion type="string">false</flowConversion>
+						<nostroReferenceId type="decimal">5897</nostroReferenceId>
+						<specificNostro type="string">false</specificNostro>
+						<customizedNostro type="string">false</customizedNostro>
+						<vostroReferenceId type="decimal">0</vostroReferenceId>
+						<specificVostro type="string">false</specificVostro>
+						<customizedVostro type="string">false</customizedVostro>
+					</settlementInstructionDescription>
+					<nostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_ACC</fieldLabel>
+							<fieldIndex type="decimal">0</fieldIndex>
+							<fieldValue type="string">600-370404</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_NAME</fieldLabel>
+							<fieldIndex type="decimal">6</fieldIndex>
+							<fieldValue type="string">SBLLGB2L</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">INST_CODE</fieldLabel>
+							<fieldIndex type="decimal">25</fieldIndex>
+							<fieldValue type="string">POALILIT</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">NOS_ACC</fieldLabel>
+							<fieldIndex type="decimal">38</fieldIndex>
+							<fieldValue type="string">100050862</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</nostroInstructions>
+					<vostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</vostroInstructions>
+				</settlementInstruction>
+				<settlementInstruction type="settlementInstruction">
+					<settlementInstructionKey type="settlementInstructionKey">
+						<partyReference href="#_1829"/>
+						<flowSign type="string">Credit</flowSign>
+						<flowCurrency type="string">ILS</flowCurrency>
+						<flowNature type="string">Revenue</flowNature>
+						<settlementType type="string">Cash</settlementType>
+					</settlementInstructionKey>
+					<settlementInstructionDescription type="settlementInstructionDescription">
+						<flowConversion type="string">false</flowConversion>
+						<nostroReferenceId type="decimal">5897</nostroReferenceId>
+						<specificNostro type="string">false</specificNostro>
+						<customizedNostro type="string">false</customizedNostro>
+						<vostroReferenceId type="decimal">0</vostroReferenceId>
+						<specificVostro type="string">false</specificVostro>
+						<customizedVostro type="string">false</customizedVostro>
+					</settlementInstructionDescription>
+					<nostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_ACC</fieldLabel>
+							<fieldIndex type="decimal">0</fieldIndex>
+							<fieldValue type="string">600-370404</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_NAME</fieldLabel>
+							<fieldIndex type="decimal">6</fieldIndex>
+							<fieldValue type="string">SBLLGB2L</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">INST_CODE</fieldLabel>
+							<fieldIndex type="decimal">25</fieldIndex>
+							<fieldValue type="string">POALILIT</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">NOS_ACC</fieldLabel>
+							<fieldIndex type="decimal">38</fieldIndex>
+							<fieldValue type="string">100050862</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</nostroInstructions>
+					<vostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</vostroInstructions>
+				</settlementInstruction>
+				<settlementInstruction type="settlementInstruction">
+					<settlementInstructionKey type="settlementInstructionKey">
+						<partyReference href="#_1829"/>
+						<flowSign type="string">Debit</flowSign>
+						<flowCurrency type="string">ILS</flowCurrency>
+						<flowNature type="string">Revenue</flowNature>
+						<settlementType type="string">Cash</settlementType>
+					</settlementInstructionKey>
+					<settlementInstructionDescription type="settlementInstructionDescription">
+						<flowConversion type="string">false</flowConversion>
+						<nostroReferenceId type="decimal">5897</nostroReferenceId>
+						<specificNostro type="string">false</specificNostro>
+						<customizedNostro type="string">false</customizedNostro>
+						<vostroReferenceId type="decimal">0</vostroReferenceId>
+						<specificVostro type="string">false</specificVostro>
+						<customizedVostro type="string">false</customizedVostro>
+					</settlementInstructionDescription>
+					<nostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_ACC</fieldLabel>
+							<fieldIndex type="decimal">0</fieldIndex>
+							<fieldValue type="string">600-370404</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">BEN_NAME</fieldLabel>
+							<fieldIndex type="decimal">6</fieldIndex>
+							<fieldValue type="string">SBLLGB2L</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">INST_CODE</fieldLabel>
+							<fieldIndex type="decimal">25</fieldIndex>
+							<fieldValue type="string">POALILIT</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">NOS_ACC</fieldLabel>
+							<fieldIndex type="decimal">38</fieldIndex>
+							<fieldValue type="string">100050862</fieldValue>
+							<fieldType type="string">character</fieldType>
+						</userDefinedField>
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</nostroInstructions>
+					<vostroInstructions type="UserDefinedFields">
+						<userDefinedField type="UserDefinedField">
+							<fieldLabel type="string">UNIQUE_KEY</fieldLabel>
+							<fieldIndex type="decimal">46</fieldIndex>
+							<fieldValue type="string">0</fieldValue>
+							<fieldType type="string">numeric</fieldType>
+						</userDefinedField>
+					</vostroInstructions>
+				</settlementInstruction>
+			</settlementInstructions>
+			<confirmationInstructions type="confirmationInstructions">
+				<confirmationInstruction type="confirmationInstruction">
+					<ruleReference>1</ruleReference>
+					<validity type="string">true</validity>
+					<partyType type="string">common</partyType>
+					<partyName type="string">TEL AVIV STOCK EXCH</partyName>
+					<filterLabel/>
+					<documentTypeLabel type="string">SWIFT</documentTypeLabel>
+					<masterAgreementLabel type="string"/>
+					<masterAgreement type="masterAgreement">
+						<internalSignature type="signature"/>
+						<externalSignature type="signature"/>
+					</masterAgreement>
+					<language type="string"/>
+					<customInformation type="string"/>
+					<address type="address">
+						<country type="string">IS</country>
+						<city type="string">TEL AVIV</city>
+						<streetAddress type="streetAddress">
+							<streetAddressElement type="string">THE TEL AVIV STOCK EXCHANGE</streetAddressElement>
+							<streetAddressElement type="string">CLEARING HOUSE LTD</streetAddressElement>
+							<streetAddressElement type="string">54 AHAD HA AM STREET</streetAddressElement>
+							<streetAddressElement type="string"/>
+						</streetAddress>
+						<contacts type="contacts"/>
+						<comments type="Comments"/>
+					</address>
+				</confirmationInstruction>
+			</confirmationInstructions>
+			<tradeInputConditions type="TradeInputConditions">
+				<inputBy>
+					<userName type="string">KACMARIKL</userName>
+					<code/>
+				</inputBy>
+				<systemDate type="date">20061123</systemDate>
+				<computerDate type="date">20061109</computerDate>
+				<validityDate type="date">20061123</validityDate>
+				<computerTime type="time">16:59:09</computerTime>
+				<areaCode type="decimal">0</areaCode>
+				<lateTrading type="string">earlyTrading</lateTrading>
+				<timestamp>2007/05/22 15:05:05</timestamp>
+				<initialData type="UserDefinedFields"/>
+			</tradeInputConditions>
+			<tradeStatus type="tradeStatus">
+				<physicalStatus type="string">live</physicalStatus>
+			</tradeStatus>
+			<tradeVersions>
+				<tradeVersion>
+					<businessObjectId mefClass="" type="string">
+						<identifier>497691</identifier>
+						<baseIdentifier>497691</baseIdentifier>
+						<versionIdentifier>
+							<versionRevision>
+								<versionNumber>1</versionNumber>
+								<versionDateAndTime>
+									<date type="date">00000000</date>
+								</versionDateAndTime>
+							</versionRevision>
+						</versionIdentifier>
+						<primarySystem>MX</primarySystem>
+					</businessObjectId>
+					<contractEventReference mefClass="">
+						<contractEventId type="contractEventId">
+							<internalId>-1</internalId>
+							<businessObjectId mefClass="" type="string">
+								<versionIdentifier>
+									<versionRevision>
+										<versionNumber>1</versionNumber>
+										<versionDateAndTime>
+											<date type="date">00000000</date>
+										</versionDateAndTime>
+									</versionRevision>
+								</versionIdentifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+						</contractEventId>
+					</contractEventReference>
+					<contractEventOriginReference mefClass="">
+						<contractEventId type="contractEventId">
+							<internalId>0</internalId>
+							<businessObjectId mefClass="" type="string">
+								<versionIdentifier>
+									<versionRevision>
+										<versionNumber>1</versionNumber>
+										<versionDateAndTime>
+											<date type="date">00000000</date>
+										</versionDateAndTime>
+									</versionRevision>
+								</versionIdentifier>
+								<primarySystem>MX</primarySystem>
+							</businessObjectId>
+						</contractEventId>
+					</contractEventOriginReference>
+					<action>INSERT</action>
+					<date type="date">20061109</date>
+					<validityDate type="date">20061123</validityDate>
+					<timestamp>2007/05/22 15:05:05</timestamp>
+					<lateTrading type="string">N</lateTrading>
+					<tradePurpose/>
+					<isActive>true</isActive>
+				</tradeVersion>
+			</tradeVersions>
+			<evaluationFlows>
+				<evaluationFlow>
+					<flow type="flow">
+						<payerPartyReference href="#SBSA-GTS">
+							<portfolioReference href="#LMLNSBLEMP5"/>
+						</payerPartyReference>
+						<receiverPartyReference href="#_1829"/>
+						<date type="date">20061109</date>
+						<currency type="string">ILS</currency>
+						<amount type="decimal">5311678</amount>
+						<comment type="string"/>
+					</flow>
+					<flowBody>
+						<flow_transaction>
+							<phase type="integer">1</phase>
+							<leg type="integer">1</leg>
+							<notionalAmount type="decimal">0</notionalAmount>
+							<notionalUnit>
+								<unitType type="string">Currency</unitType>
+								<unitLabel type="string"/>
+							</notionalUnit>
+							<rate type="decimal">0.</rate>
+							<margin type="decimal">0.</margin>
+							<calculationStartDate type="date">00000000</calculationStartDate>
+							<calculationEndDate type="date">00000000</calculationEndDate>
+							<fixingDate type="date">00000000</fixingDate>
+							<fixingValue type="decimal">0.</fixingValue>
+						</flow_transaction>
+					</flowBody>
+					<flowTypologies>
+						<flowTypology>
+							<label type="string">Typology0</label>
+							<value type="decimal">CAP</value>
+						</flowTypology>
+						<flowTypology>
+							<label type="string">Typology1</label>
+							<value type="decimal">NOM</value>
+						</flowTypology>
+						<flowTypology>
+							<label type="string">Typology2</label>
+							<value type="decimal">INIT</value>
+						</flowTypology>
+						<flowTypology>
+							<label type="string">Typology3</label>
+							<value type="decimal"/>
+						</flowTypology>
+						<flowTypology>
+							<label type="string">Typology4</label>
+							<value type="decimal">INT</value>
+						</flowTypology>
+					</flowTypologies>
+					<businessObjectId mefClass="mxSettlementIFLOW" type="string">
+						<versionIdentifier>
+							<versionRevision>
+								<versionNumber>1</versionNumber>
+								<versionDateAndTime>
+									<date type="date">00000000</date>
+								</versionDateAndTime>
+							</versionRevision>
+						</versionIdentifier>
+						<primarySystem>MX</primarySystem>
+					</businessObjectId>
+				</evaluationFlow>
+			</evaluationFlows>
+			<deletedFlows/>
+		</trade>
+	</trades>
+</MxML>
