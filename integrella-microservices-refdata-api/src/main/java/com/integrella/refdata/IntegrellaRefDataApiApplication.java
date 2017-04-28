@@ -11,6 +11,14 @@ import org.springframework.data.mongodb.core.convert.DefaultMongoTypeMapper;
 import org.springframework.data.mongodb.core.convert.MappingMongoConverter;
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 
+/**
+ * Main Spring boot application class
+ * Note that the \@ComponentScan annotation to advise Spring Boot where to pick up 
+ * the Spring components
+ * 
+ * @author Kashim
+ *
+ */
 @SpringBootApplication
 @ComponentScan("com.integrella.refdata.repository.rest")
 public class IntegrellaRefDataApiApplication {
@@ -18,18 +26,4 @@ public class IntegrellaRefDataApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(IntegrellaRefDataApiApplication.class, args);
 	}
-	
-//    @Bean
-//    public MongoTemplate mongoTemplate(MongoDbFactory mongoDbFactory,
-//                                       MongoMappingContext context) {
-//
-//        MappingMongoConverter converter =
-//                new MappingMongoConverter(new DefaultDbRefResolver(mongoDbFactory), context);
-//        converter.setTypeMapper(new DefaultMongoTypeMapper(null));
-//
-//        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory, converter);
-//
-//        return mongoTemplate;
-//
-//    }
 }

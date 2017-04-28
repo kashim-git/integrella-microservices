@@ -13,21 +13,37 @@
 		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
 		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd">
 
-	<!--  import resource="classpath:IntegrellaMdm-config.xml" / -->
+	<!--  KC: start
+		This project executes as follows: 
+		1.Control Component registered on inbound-channel-adapter
+		2.At the configured time, the amqp inbound-channel-adapter starts and picks up any messages from q.adapter.inbound
+		3.sends message to transformer invoking com.integrella.microservices.transformer.TransformMessage.transform()
+		4.amqp outbound-channel-adapter sends message to exchange: mdm.esb.exchange, queue: q.mdm.esb
+		5.At the configured time, the amqp inbound-channel-adapter stops
+		
+		NB1: wiretap defined on channels to log payloads passing through
+		NB2: INFRASTRUCTURE section below contains details to connect to RabbitMQ 
+		NB3. CustomScheduler.java and change the cron settings to modify the start and stop times
+	KC: End -->
 
-	<int:wire-tap channel="logger" pattern="inboundMessages,outboundMessages"/>
+	<int:wire-tap channel="logger" pattern="inboundMessages,outboundMessages,controlChannel"/>
 	<int:logging-channel-adapter id="logger" log-full-message="true" level="INFO"/>
     
-    <!--  To receive AMQP Messages from a Queue, configure an inbound-channel-adapter  -->
+    <int:channel id="controlChannel"></int:channel>
     
-   <int-amqp:inbound-channel-adapter
+    <int:control-bus input-channel="controlChannel"/>
+     
+	<!--  To receive AMQP Messages from a Queue, configure an inbound-channel-adapter  -->
+    
+    <int-amqp:inbound-channel-adapter
    		id="inbound"
-   		queue-names="q.mdm.esb"
+   		queue-names="q.adapter.inbound"
    		channel="inboundMessages"
-   		connection-factory="mdmConnectionFactory"/>
+   		connection-factory="mdmConnectionFactory"
+   		auto-startup="false"/>
 
 	<int:channel id="inboundMessages"/>
-       
+      
     <int:channel id="outboundMessages"/>
     
     
@@ -47,8 +63,8 @@
  	<int-amqp:outbound-channel-adapter 
  		id="outbound"
  		channel="outboundMessages"
-        exchange-name="mdm.outbound.exchange"
-        routing-key="out"
+        exchange-name="mdm.esb.exchange"
+        routing-key="esb"
         amqp-template="rabbitTemplate"/>
         
         
@@ -60,13 +76,13 @@
 
 	<rabbit:admin connection-factory="mdmConnectionFactory" />
 
-	<rabbit:queue name="q.adapter.outbound"/>
+	<rabbit:queue name="q.adapter.inbound"/>
 	<rabbit:queue name="q.mdm.esb"/>
 	
 
-	<rabbit:direct-exchange name="mdm.outbound.exchange">
+	<rabbit:direct-exchange name="mdm.esb.exchange">
 		<rabbit:bindings>
-			<rabbit:binding queue="q.adapter.outbound" key="out"/>
+			<rabbit:binding queue="q.mdm.esb" key="esb" />
 		</rabbit:bindings>
 	</rabbit:direct-exchange>
 

@@ -13,7 +13,16 @@
 		http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
 		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd">
 
-	<!--  import resource="classpath:IntegrellaMdm-config.xml" / -->
+	<!-- KC: Start
+			this project runs as follows
+			1. amqp inbound-channel-adapter picks up message from q.adapter.inbound
+			2. sends message to transformer invoking com.integrella.microservices.transformer.TransformMessage.transform()
+			3. amqp outbound-channel-adapter sends message to exchange: mdm.esb.exchange, queue: q.mdm.esb
+			
+			NB1: wiretap defined on channels to log payloads passing through
+			NB2: INFRASTRUCTURE section below contains details to connect to RabbitMQ			
+
+		KC: End -->
 
 	<int:wire-tap channel="logger" pattern="inboundMessages,outboundMessages"/>
 	<int:logging-channel-adapter id="logger" log-full-message="true" level="INFO"/>

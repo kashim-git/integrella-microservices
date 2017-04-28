@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.integrella.microservices</groupId>
+	<artifactId>integrella-microservices-producer-fpml</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>integrella-microservices-producer-fpml</name>
+	<description>Integrella Message-Driven-Microservices Reference Architecture Inbound Adaptor</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+	    <dependency>
+	      <groupId>org.springframework.integration</groupId>
+	      <artifactId>spring-integration-xml</artifactId>
+	    </dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-integration</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.7.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.RC1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin> 
+				<groupId>org.codehaus.mojo</groupId> 
+				<artifactId>jaxws-maven-plugin</artifactId> 
+				<version>1.6</version> 
+				<configuration> <!-- Needed with JAXP 1.5 --> 
+				<vmArgs> 
+					<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg> 
+				</vmArgs> 
+				</configuration> 
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+	            <groupId>org.codehaus.mojo</groupId>
+	            <artifactId>jaxb2-maven-plugin</artifactId>
+	            <version>1.6</version>
+	            <executions>
+	            <!-- 
+	                <execution>
+			            <id>set-additional-system-properties</id>
+			            <goals>
+			                <goal>set-system-properties</goal>
+			            </goals>
+			        </execution>
+			         -->
+	                <execution>
+	                    <id>xjc</id>
+	                    <goals>
+	                        <goal>xjc</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	            <configuration>
+                        <outputDirectory>src/main/java</outputDirectory>
+                        <clearOutputDir>false</clearOutputDir>
+                        <packageName>com.integrella.fpML.schema</packageName>
+                        <schemaDirectory>${basedir}/src/main/xsd/schema</schemaDirectory>
+                        <!--schemaFiles>XYZ.xsd</schemaFiles-->
+                </configuration>
+	            <!-- 
+	            <configuration>
+	                <properties>
+			            <property>
+			                <name>javax.xml.accessExternalSchema</name>
+			                <value>all</value>
+			            </property>
+			            <property>
+			                <name>javax.xml.accessExternalDTD</name>
+			                <value>all</value>
+			            </property>
+        			</properties>
+	                <packageName>com.integrella.fpML.schema</packageName>
+					<schemaDirectory>${basedir}/src/main/xsd/schema</schemaDirectory>
+	            </configuration>
+	             -->
+        	</plugin>
+		</plugins>
+		
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
+</project>

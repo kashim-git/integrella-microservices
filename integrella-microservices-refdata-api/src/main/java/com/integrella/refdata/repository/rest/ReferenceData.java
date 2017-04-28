@@ -2,6 +2,12 @@ package com.integrella.refdata.repository.rest;
 
 import org.springframework.data.annotation.Id;
 
+/**
+ * This class is an object representation of a single record of Reference Data
+ * 
+ * @author Kashim
+ *
+ */
 public class ReferenceData {
 	
     @Id
@@ -11,6 +17,8 @@ public class ReferenceData {
 	private String targetSystem;
 	private String sourceValue;
 	private String targetValue;
+	
+	
 	public String getId() {
 		return id;
 	}
